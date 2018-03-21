@@ -8,5 +8,5 @@ import java.util.*;
  * @author Jason Height (jheight@chariot.net.au)
  */
 public interface SpellCheckListener extends EventListener {
-  public void spellingError(SpellCheckEvent event);
+    public void spellingError(SpellCheckEvent event);
 }

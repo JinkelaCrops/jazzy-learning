@@ -1,9 +1,6 @@
 import com.swabunga.spell.engine.SpellDictionary;
 import com.swabunga.spell.engine.SpellDictionaryHashMap;
-import com.swabunga.spell.event.SpellCheckEvent;
-import com.swabunga.spell.event.SpellCheckListener;
-import com.swabunga.spell.event.SpellChecker;
-import com.swabunga.spell.event.StringWordTokenizer;
+import com.swabunga.spell.event.*;
 
 import java.io.File;
 import java.util.Iterator;
@@ -43,7 +40,9 @@ public class SpellCheck {
         SpellChecker spellChecker = new SpellChecker(dictionary);
         spellChecker.addSpellCheckListener(new SuggestionListener());
 
-        System.out.println(spellChecker.checkSpelling(new StringWordTokenizer("lime")));
+        StringWordTokenizer a = new StringWordTokenizer("This is an opem book. that is anothe book.");
+        int b = spellChecker.checkSpelling(a);
+        System.out.println(b);
 //        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 //        while (true) {
 //            System.out.print("Enter line to spell check (return to exit): ");
