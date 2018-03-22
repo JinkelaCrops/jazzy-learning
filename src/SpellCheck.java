@@ -40,7 +40,7 @@ public class SpellCheck {
         SpellChecker spellChecker = new SpellChecker(dictionary);
         spellChecker.addSpellCheckListener(new SuggestionListener());
 
-        StringWordTokenizer a = new StringWordTokenizer("this is an spemd book. that is anthr book.");
+        StringWordTokenizer a = new StringWordTokenizer("this is an opem book. that is anothe book.");
         int b = spellChecker.checkSpelling(a);
         System.out.println(b);
 //        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
