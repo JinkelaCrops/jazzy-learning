@@ -36,11 +36,11 @@ public class SpellCheck {
 //            System.err.println("Usage: Suggest <dictionary file>");
 //            System.exit(1);
 //        }
-        SpellDictionary dictionary = new SpellDictionaryHashMap(new File("./dict/english.0"));
+        SpellDictionary dictionary = new SpellDictionaryHashMap(new File("./dict/en_US/en_us.dic"), new File("./dict/en_US/phonet.en"));
         SpellChecker spellChecker = new SpellChecker(dictionary);
         spellChecker.addSpellCheckListener(new SuggestionListener());
 
-        StringWordTokenizer a = new StringWordTokenizer("This is an opem book. that is anothe book.");
+        StringWordTokenizer a = new StringWordTokenizer("this is an opem book. that is anothe book.");
         int b = spellChecker.checkSpelling(a);
         System.out.println(b);
 //        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
