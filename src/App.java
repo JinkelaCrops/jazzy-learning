@@ -23,7 +23,6 @@ public class App {
 //                    bracket.add('<');
 //            }
 //        }
-
         Pattern p = Pattern.compile("\\.\\.\\.|\\.|<|>");
         Matcher m = p.matcher(src);
         while (m.find()) {
